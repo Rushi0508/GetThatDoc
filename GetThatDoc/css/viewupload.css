@@ -1,0 +1,127 @@
+h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 2%;
+}
+hr{
+    margin: auto;
+    width: 50%;
+    border: 2px solid wheat;
+}
+table{
+  margin: auto;
+}
+table,
+    th,
+    td {
+        border: 3px solid rgb(255, 255, 255);
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 7px 8px;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: whitesmoke;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #d6d6d6;
+    }
+
+    thead tr th {
+      background-color: #000000;
+      color: white;
+    }
+    tr {
+      transition: all .2s ease-in;
+      cursor: pointer;
+    }
+    
+    tr:hover {
+      transform: scale(1.02);
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+@media  screen and (min-width:1200px) {
+        table{
+            width: 70%;
+        }
+    }
+    @media  screen and (min-width:1400px) {
+        table{
+            width: 80%;
+        }
+    }
+    @media  screen and (max-width:1130px) {
+        table{
+            margin: auto;
+            width: 80%;
+        }
+        /* #header{
+            display: block;
+        } */
+    }
+    @media screen and (max-width:600px) {
+        table thead{
+            display: none;
+        }
+        table, table  tbody, table tr, table td{
+            display: block;
+            width:100%;
+        }
+        td{
+            padding: 7px 12px;
+        }
+        table tbody tr td{
+            text-align:right;
+            padding-left:50%;
+            position:relative;
+            padding-block: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .table tr{
+            margin-bottom: 5px; 
+        }
+        table td:before{
+            content:attr(data-label);
+            position:absolute;
+            left:0;
+            width:40%;
+            padding-left:15px;
+            font-weight:600;
+            text-align:left;
+        }
+        table{
+            width: 80%;
+        }
+} 
+#slider-notes{
+    margin-top: 5px;
+    background: none;
+    color: #000000;
+    border: 2px solid white;
+    font-size: 1em;
+    padding: 5px 15px;
+    transition: all 0.2s;
+    background-color: #d06464;
+    font-family: 'Truculenta', sans-serif;
+    font-weight: 700;
+}
+#slider-notes:hover{
+    border-color: #f0f1ed;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em #1c1d1b;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+h3{
+    text-align: center;
+    font-family: 'Truculenta', sans-serif;
+}
+

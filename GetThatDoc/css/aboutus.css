@@ -1,0 +1,117 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.team-section{
+	font-family: 'Poppins', sans-serif;
+}
+
+.team-section{
+	width: 100%;
+    /* background: linear-gradient(to bottom left,#000,#1b2026); */
+}
+.team-section .container{
+	width: 80%;
+	margin: auto;
+}
+#line{
+    color: #ec3570;
+}
+.team-section .container .row .title{
+	text-align: center;
+	/* margin-top: 25px; */
+}
+.team-section .container .row .title h1{
+    display: inline-block;
+    margin-top: 20px;
+	font-size: 35px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: #ec3570;
+}
+.team-section .container .row .title p{
+	font-size: 18px;
+	font-family: 'Poppins';
+	margin: 10px 0px;
+	color: black;
+    letter-spacing: 2px;
+}
+
+.team-section .container .team-card{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 50px;
+	margin-top: 15px;
+}
+.team-section .container .team-card .card{
+	width: 100%;
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+}
+.team-section .container .team-card .card:hover{
+	background-color: #f3f3f3;
+	transition: 0.3s;
+}
+.team-section .container .team-card .card .image-section img{
+	height: 176px;
+	width: 176px;
+	border-radius: 50%;
+	border: 6px solid #fff;
+}
+.team-section .container .team-card .card .content{
+	width: 100%;
+	text-align: center;
+}
+.team-section .container .team-card .card .content h1{
+	font-size: 27px;
+	margin-top: 10px;
+	letter-spacing: 1.5px;
+	color: #639ab8;
+}
+.team-section .container .team-card .card .content h4{
+	font-size: 17px;
+	margin: 5px;
+	letter-spacing: 1.5px;
+	color: #6e6e6e;
+}
+.content p{
+	display: flex;
+	justify-content: center;
+}
+ .content p a img{
+	width: 30px;
+	height: 30px;
+	line-height: 1.5;
+	margin: 5px 10px;
+}
+ .content p a img:hover{
+	transform: scale(1.3);
+	transition: 0.2s ease-in-out;
+}
+
+
+@media (max-width:1220px) and (min-width:600px) {
+	.team-section .container .team-card{
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 20px;
+	}
+
+	.hitarth {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	
+}
+@media screen and (max-width:600px) {
+	.team-section .container .team-card{
+		grid-template-columns: repeat(1,1fr);
+		grid-gap: 20px;
+	}
+}
+
