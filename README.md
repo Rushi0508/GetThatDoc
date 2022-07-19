@@ -4,6 +4,8 @@
 Name of our website is 'GetThatDoc' which is a Notes
 Sharing Platform.
 
+Site is live at http://getthatdoc.epizy.com/
+
 
 
 
