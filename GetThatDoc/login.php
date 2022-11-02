@@ -25,10 +25,10 @@
 		<form action="login.php" method="POST" class="login-email">
 			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
 			<div class="input-group">
-				<input type="text" placeholder="Username" name="uname" required>
+				<input type="text"  value="<?php if (isset($_COOKIE["user"])){echo $_COOKIE["user"];}?>" placeholder="Username" name="uname" required>
 			</div>
 			<div class="input-group">
-				<input type="password" placeholder="Password" name="psw" required>
+				<input type="password"  value="<?php if (isset($_COOKIE["pass"])){echo $_COOKIE["pass"];}?>" placeholder="Password" name="psw" required>
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Login</button>
@@ -51,11 +51,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($num == 1){
         $row=mysqli_fetch_assoc($result);
         $userId = $row['userid'];
+        // $fname = $row['firstname'];
+        // $lname = $row['lastname'];
+        // echo die($fname);
         if (password_verify($password, $row['password'])){ 
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
+            // $_SESSION['firstname'] = $fname;
             $_SESSION['userId'] = $userId;
+            setcookie("user", $row['username'], time() + (86400 * 30)); 
+            setcookie("pass", $password, time() + (86400 * 30)); 
             header("location: /GetThatDoc/home.php?loginsuccess=true");
             exit();
         } 
