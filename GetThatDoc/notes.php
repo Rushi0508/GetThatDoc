@@ -104,7 +104,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){?>
         if(isset($_GET['search'])){
           $query = $_GET['search'];
           $query = $link -> real_escape_string($query);
-          $sql = "select * from fileupload where (title like '%".$query."%')";
+          $sql = "select * from fileupload where (title like '%".$query."%') and approved = 1";
           $row = mysqli_query($link,$sql);
           $result = mysqli_num_rows($row);
           
@@ -146,7 +146,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){?>
       ?>
         <?php
         echo '<h1 id="notes-head">Few notes...</h1>';
-        $sql="SELECT * FROM fileupload";
+        $sql="SELECT * FROM fileupload where approved = 1 and featured = 1";
         $query=mysqli_query($link, $sql);
         $count=0;
         while ($res=mysqli_fetch_array($query)) {
