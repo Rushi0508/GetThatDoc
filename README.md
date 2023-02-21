@@ -12,7 +12,7 @@ Site is live at http://getthatdoc.epizy.com/
 ## Purpose
 
 
-- So nowadays the students do not the notes which
+- So nowadays the students do not get the notes which
   they really need and there is no proper source from where 
   they can get notes whether its hand-written or typed.
 
